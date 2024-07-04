@@ -4,14 +4,26 @@ function toFilename(name){
     return filename;
 }
 
-function readJson(filename){
-    let dict = {};
+async function readJson(filename){
+    try {
+        const response = await fetch('http://localhost:8000/'+filename); //gets the JSON file using the local http server
+
+        // Check if the response is OK
+        if (!response.ok) {
+            throw new Error('Error in network response');
+        }
+
+        // Parse the JSON data
+        const jsonData = await response.json();
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
     //loads json file into dict...
 
-    return dict;
+    return jsonData;
 }
 
-function writeJson(dict, filename){
+async function writeJson(dict, filename){
     //loads the info from dict into filename
 }
 

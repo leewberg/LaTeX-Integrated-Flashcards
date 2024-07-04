@@ -27,6 +27,7 @@ class Card{
 
     display(){
         //work in progress
+        //json.stringify can be useful here...
     };
 
     editCard(){
