@@ -1,5 +1,5 @@
-import Deck from "deck.js"
-import { toFilename } from "./generalFunctions";
+/*import Deck from "deck.js"
+import { toFilename } from "./generalFunctions";*/
 
 class Library{
     constructor(name, listOfDecks){
@@ -11,6 +11,6 @@ class Library{
     openDeck(){};
 
     createNewDeck(deckname){
-        this.decks.push(new Deck([ ], deckname, toFilename(deckname)))
+        this.decks.push(new Deck([ ], deckname, deckname));//toFilename(deckname)));
     }
 }

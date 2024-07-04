@@ -1,4 +1,4 @@
-export class Card{
+class Card{
     //attributes
     constructor(q, a){
         this.question = q;

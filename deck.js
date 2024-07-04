@@ -1,6 +1,4 @@
-import {Card} from "cards.js"
-
-export class Deck{
+class Deck{
     constructor(listOfCards, name, filename){
         this.cards = listOfCards;
         this.name = name;
@@ -23,9 +21,9 @@ export class Deck{
 
     editDeck(){};
 
-    saveDekc(){};
+    saveDeck(){};
 
-    addBlakCard(){
+    addBlankCard(){
         //as we should in theory only need to update the json-file when we save the deck, we don't need to do that here
         this.cards.push(new Card(" ", " "));
     }
