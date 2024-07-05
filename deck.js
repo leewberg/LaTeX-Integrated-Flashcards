@@ -5,6 +5,7 @@ class Deck{
         this.filename = filename;
         this.learnedCards = [];
         this.remainingCards = [];
+        this.size = 0;
     }
 
     //methods

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play a deck!</title>
+    <link rel = "stylesheet" href = "http://localhost:8000/stylesheet/stylesheet.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src = "cards.js"></script>
+    <script src = "deck.js"></script>
+    <script src = "generalFunctions.js"></script>
+    <script src = "library.js"></script>
+</head>
+<body id = "deckBody">
+    <div id="fileOpeners">
+        <label for="deckChoosing">Choose which deck you want to play by opening the json file from your computer!<br></label>
+        <input type="file" name="deckChoosing">
+    </div>
+    <div id="nameDisplay">Name of deck</div>
+    <div id="progress">0/10</div>
+    <div id="currentCard">This is an example of how a card can look!</div>
+    <div id="navigation">
+        <div id="remainigCards">0</div>
+        <button id="flip">Flip card</button>
+        <div id="correctCards">0</div>
+    </div>
+    <script>
+        /*var obj = {"Name": "John Doe", "Age": 20};
+        var objKeys = Object.keys(obj);
+        for (let i = 0; i < objKeys.length; i++){
+            console.log(obj[objKeys[i]]);
+        }*/ //test of some code to be used later when getting decks
+    </script>
+</body>
+</html>
