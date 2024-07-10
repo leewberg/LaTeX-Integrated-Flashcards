@@ -13,17 +13,19 @@
     <script src = "library.js"></script>
 </head>
 <body>
-    <div id="fileOpeners">
-        <label for="deckChoosing">Choose which deck you want to play by opening the json file from your computer!<br></label>
-        <input type="file" name="deckChoosing">
-    </div>
-    <div id="nameDisplay">Name of deck</div>
-    <div id="progress">0/10</div>
-    <div id="currentCard">This is an example of how a card can look!</div>
-    <div id="navigation">
-        <div id="remainigCards">0</div>
-        <button id="flip">Flip card</button>
-        <div id="correctCards">0</div>
+    <div id="cardBody">
+        <div id="fileOpeners">
+            <label for="deckChoosing">Click button to choose the .json file that contains the flashcard set you want to play <br></label>
+            <input type="file" name="deckChoosing" id="deckChoosing">
+        </div>
+        <div id="nameDisplay">Name of deck</div>
+        <div id="progress">0/10</div>
+        <div id="currentCard">This is an example of how a card can look!</div>
+        <div id="navigation">
+            <div id="remainigCards">0</div>
+            <button id="flip">Flip card</button>
+            <div id="correctCards">0</div>
+        </div>
     </div>
     <script>
         /*var obj = {"Name": "John Doe", "Age": 20};

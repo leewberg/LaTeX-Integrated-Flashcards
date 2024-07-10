@@ -1,15 +1,15 @@
-body, #cardBody{
+body{
     margin:0;
     padding:0;
     font-family: 'Calibri', 'Arial', 'sans-serif';
-    width:100%;
-    min-height:100vh;
+    max-width:100%;
+    height:100%;
 }
 
 #cardBody{
     display: grid;
     grid-template-rows: repeat(5, auto);
-    grid-template-columns: 100vw;
+    grid-template-columns: 100%;
 
 }
 #nameDisplay{
@@ -18,12 +18,36 @@ body, #cardBody{
     margin-right: 25vw;
     align-content: center;
     text-align: center;
+    font-size: 25px;
+    margin-top: 2vw;
+    padding:2vw;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#progress{
+    width: 25vw;
+    margin-left: 37.5vw;
+    margin-right: 37.5vw;
+    align-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding:2vw;
+    background-color:rgb(245, 250, 255);
+    border-radius: 10px;
 }
 
 #fileOpeners{
-    height: 20vw;
-    width: 10vw;
     align-items: center;
+    border-radius: 10px;
+    background-color: rgb(223, 240, 255);
+    padding: 1vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    font-size: 20px;
+    margin-top: 2vw;
 }
 
 #currentCard{
@@ -40,8 +64,46 @@ body, #cardBody{
 }
 
 #navigation{
-    width:100vw;
+    width:100%;
     display:grid;
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: auto;
+    grid-template-rows: 100%;
+    font-size: 20px;
+    margin-top: 2vw;
+    align-items: center;
+}
+
+#flip, #remainigCards, #correctCards{
+    margin-top: 1vw;
+    height: 5vw;
+}
+
+#remainigCards, #correctCards{
+    align-content: center;
+    text-align: center;
+    border: solid 2px;
+    border-radius: 4px;
+    margin-right: 14vw;
+    margin-left: 14vw;
+    width: 5vw;
+}
+
+#remainigCards{
+    border-color: rgb(75, 198, 169);
+    color: rgb(75, 198, 169);
+    font-weight: bold;
+}
+
+#correctCards{
+    border-color: rgb(108, 59, 214);
+    color: rgb(108, 59, 214);
+    font-weight: bold;
+}
+
+#flip{
+    border: solid 2px rgb(88, 145, 101);
+    background-color: white;
+    font-weight: bold;
+    color: rgb(88, 145, 101);
+    border-radius: 4px;
 }
