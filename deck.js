@@ -1,7 +1,7 @@
 class Deck{
-    constructor(name, filename){
+    constructor(filename){
         this.cards = []
-        this.name = name;
+        this.name = filenameToRegular(filename);
         this.filename = filename;
         this.learnedCards = [];
         this.remainingCards = [];

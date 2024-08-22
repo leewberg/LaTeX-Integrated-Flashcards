@@ -13,6 +13,20 @@ function toFilename(name){
     return filename;
 }
 
+function filenameToRegular(filename){
+    let name = "";
+    for (let i = 0; i < (filename.length -4); i++){
+        if (filename[i] == "_"){
+            name += " ";
+        }
+        else{
+            name += filename[i];
+        }
+    }
+
+    return name;
+}
+
 async function readJson(filename){
     try {
         const response = await fetch('http://localhost:8000/'+filename); //gets the JSON file using the local http server

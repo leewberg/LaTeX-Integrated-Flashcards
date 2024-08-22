@@ -12,7 +12,11 @@ function changeNumber(numberType, number){
 }
 
 function changeProgress(number){
-    progress.innerHTML = number+ "/" //currentDeck.length or smth
+    progress.innerHTML = number+ "/" + currentDeck.size;
+}
+
+function makeDeck(filename){
+    currentDeck = Deck(filename)
 }
 
 /*functions needed/to be expanded upon:
