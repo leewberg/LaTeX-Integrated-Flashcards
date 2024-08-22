@@ -1,5 +1,14 @@
 function toFilename(name){
     let filename = "";
+    for (let i = 0; i < name.length; i++){
+        if (name[i] == " "){
+            filename += "_"
+        }
+        else{
+            filename += name[i]
+        }
+    }
+    filename += ".json"
     //splits up name and makes it into a valid json filename
     return filename;
 }
@@ -36,5 +45,12 @@ function createJson(filename){
 }
 
 function isValidFilename(filename){
+    let validChars = "abcdefghijklmnopqrstuv._-";
+    for (let i = 0; i < filename.length; i++){
+        if (!(validChars.includes(filename[i]))){
+            return false;
+        }
+    }
+    return true;
     //checks if a filename is valid, as in it only contains valid characters
 }

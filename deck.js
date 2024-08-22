@@ -1,11 +1,25 @@
 class Deck{
-    constructor(listOfCards, name, filename){
-        this.cards = listOfCards;
+    constructor(name, filename){
+        this.cards = []
         this.name = name;
         this.filename = filename;
         this.learnedCards = [];
         this.remainingCards = [];
         this.size = 0;
+
+        let cardData = readJson(filename);
+        let questions = Object.keys(cardData);
+        let currentQ;
+        let newCard;
+
+        //create new cards and add them to the deck. sort them to remaining cards
+        for (let i = 0; i < questions.length; i++){
+            currentQ = questions[i];
+            newCard = Card(currentQ, cardData[currentQ]);
+            this.cards.push(newCard);
+            this.size ++;
+            this.sortToRemaining(newCard);
+        }
     }
 
     //methods
